@@ -10,13 +10,17 @@ import {
   SafeAreaView,
 } from 'react-native';
 //import { HelloWorldScreen } from './src/presentation/screans/HelloWorldScreen';
-import { CounterScreen } from './src/presentation/screans/CounterScreen';
+//import { CounterScreen } from './src/presentation/screans/CounterScreen';
+import { PaperProvider } from 'react-native-paper';
+import { CounterM3Screen } from './src/presentation/screans/CounterM3Screen';
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <CounterScreen />
-    </SafeAreaView>
+    <PaperProvider>
+      <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
+        <CounterM3Screen />
+      </SafeAreaView>
+    </PaperProvider>
   );
 }
 
